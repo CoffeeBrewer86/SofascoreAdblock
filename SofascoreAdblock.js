@@ -1,5 +1,7 @@
 // 获取原始响应体
 let body = $response.body;
+console.log("拦截到了 URL: " + $request.url);
+console.log("拦截到的数据包含 ads 吗: " + (JSON.parse(body).ads ? "是" : "否"));
 
 if (body) {
     try {
